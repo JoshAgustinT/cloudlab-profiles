@@ -10,7 +10,6 @@ NIX_NO_DAEMON_VARS="$HOME/.nix-profile/etc/profile.d/nix.sh"
 DATASET_DIR=${MOUNT_DIR}/kmer_dataset
 SRA_HOME=${MOUNT_DIR}/sratoolkit
 
-SUDO_USER=jerryidk
 USER=${SUDO_USER}
 
 if [[ ${USER} == "" ]]; then
@@ -198,12 +197,12 @@ download_sratoolkit() {
 }
 
 clone_repos() {
-  #clone_incrementer
+  clone_incrementer
   clone_dramhit
-  #clone_chtkc
-  #download_datasets
-  #download_sratoolkit
-  #clone_kmer
+  clone_chtkc
+  download_datasets
+  download_sratoolkit
+  clone_kmer
 }
 
 ## Build
@@ -254,7 +253,7 @@ setup_system() {
 
 prepare_machine;
 clone_repos;
-#build_all;
+build_all;
 setup_system;
 
 
