@@ -197,12 +197,12 @@ download_sratoolkit() {
 }
 
 clone_repos() {
-  clone_incrementer
+  #clone_incrementer
   clone_dramhit
-  clone_chtkc
-  download_datasets
-  download_sratoolkit
-  clone_kmer
+  #clone_chtkc
+  #download_datasets
+  #download_sratoolkit
+  #clone_kmer
 }
 
 ## Build
@@ -240,10 +240,10 @@ process_fastq() {
 }
 
 build_all() {
-  build_incrementer;
+  #build_incrementer;
   build_dramhit;
-  build_chtkc;
-  process_fastq
+  #build_chtkc;
+  #process_fastq
 }
 
 setup_system() {
